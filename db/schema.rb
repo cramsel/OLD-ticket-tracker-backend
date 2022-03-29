@@ -30,8 +30,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_29_145300) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "movie_ID"
-    t.integer "report_ID"
+    t.integer "movie_id"
+    t.integer "report_id"
     t.integer "theater_number"
     t.string "time_slot"
     t.integer "tickets_sold"
