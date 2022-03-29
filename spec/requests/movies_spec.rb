@@ -1,7 +1,10 @@
 require "rails_helper"
 
-# RSpec.describe "Movies", type: :request do
-#   describe "GET /index" do
-#     pending "add some examples (or delete) #{__FILE__}"
-#   end
-# end
+RSpec.describe "Movies", type: :request do
+  describe "GET /movies" do
+    it "should return all movies on record" do
+      get "/movies"
+      expect(response).to have_http_status(200)
+    end
+  end
+end
