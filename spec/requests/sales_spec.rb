@@ -23,7 +23,7 @@ RSpec.describe "Sales", type: :request do
 
     #This one as well
     it "should allow for params to be customized" do
-      test_sale = { movie_id: 3, report_id: 1, theater_number: 4, time_slot: "12:30", tickets_sold: 1 }
+      test_sale = { movie_id: 3, report_id: nil, theater_number: 4, time_slot: "12:30", tickets_sold: 1 }
       post "/sales", :params => test_sale
       expect(JSON.parse(response.body)).to include(test_sale)
     end
