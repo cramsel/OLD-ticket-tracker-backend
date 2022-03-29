@@ -12,6 +12,11 @@ class SalesController < ApplicationController
       time_slot: params[:time_slot],
       tickets_sold: params[:tickets_sold],
     )
-    render json: sale
+
+    if sale.save
+      render json: sale
+    else
+      render json: { errors: sale.errors.full_messages }
+    end
   end
 end
