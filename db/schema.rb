@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_29_145300) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_30_175753) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,11 +30,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_29_145300) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "movie_id"
+    t.integer "timeslot_id"
     t.integer "report_id"
-    t.integer "theater_number"
-    t.string "time_slot"
     t.integer "tickets_sold"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "timeslots", force: :cascade do |t|
+    t.integer "movie_id"
+    t.string "time_slot"
+    t.integer "theater_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

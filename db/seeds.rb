@@ -16,20 +16,23 @@ Movie.create(
   summary: "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
   poster_url: "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
 )
-
 Report.create(name: "Report for March 29")
 Report.create(name: "Report for March 30")
+
+Timeslot.create(movie_id: 1, time_slot: "8:30", theater_number: 1)
+Timeslot.create(movie_id: 2, time_slot: "12:30", theater_number: 1)
+Timeslot.create(movie_id: 3, time_slot: "8:30", theater_number: 2)
 puts "planting"
-Sale.create(movie_id: 1, report_id: 2, theater_number: 1, time_slot: "8:00", tickets_sold: 3)
-Sale.create(movie_id: 1, report_id: 1, theater_number: 1, time_slot: "8:00", tickets_sold: 2)
-Sale.create(movie_id: 1, report_id: 1, theater_number: 1, time_slot: "8:00", tickets_sold: 5)
+Sale.create(timeslot_id: 1, report_id: 2, tickets_sold: 3)
+Sale.create(timeslot_id: 1, report_id: 1, tickets_sold: 2)
+Sale.create(timeslot_id: 1, report_id: 1, tickets_sold: 5)
 
-Sale.create(movie_id: 2, report_id: 1, theater_number: 2, time_slot: "8:00", tickets_sold: 4)
-Sale.create(movie_id: 2, report_id: 1, theater_number: 2, time_slot: "8:00", tickets_sold: 1)
-Sale.create(movie_id: 2, report_id: 1, theater_number: 2, time_slot: "8:00", tickets_sold: 2)
+Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 4)
+Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 1)
+Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 2)
 
-Sale.create(movie_id: 3, report_id: 2, theater_number: 3, time_slot: "8:00", tickets_sold: 4)
-Sale.create(movie_id: 3, report_id: 2, theater_number: 3, time_slot: "8:00", tickets_sold: 6)
-Sale.create(movie_id: 3, report_id: 2, theater_number: 3, time_slot: "8:00", tickets_sold: 3)
+Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 4)
+Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 6)
+Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 3)
 
 puts "Seeds planted"

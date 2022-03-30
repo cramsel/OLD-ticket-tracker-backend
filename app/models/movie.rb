@@ -1,3 +1,3 @@
 class Movie < ApplicationRecord
-  has_many :sales
+  has_many :timeslots
 end
