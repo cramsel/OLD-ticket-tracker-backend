@@ -19,20 +19,20 @@ Movie.create(
 Report.create(name: "Report for March 29")
 Report.create(name: "Report for March 30")
 
-Timeslot.create(movie_id: 1, time_slot: "8:30", theater_number: 1)
-Timeslot.create(movie_id: 2, time_slot: "12:30", theater_number: 1)
-Timeslot.create(movie_id: 3, time_slot: "8:30", theater_number: 2)
+Timeslot.create(movie_id: 1, report_id: 1, time_slot: "8:30", theater_number: 1)
+Timeslot.create(movie_id: 2, report_id: 1, time_slot: "12:30", theater_number: 1)
+Timeslot.create(movie_id: 3, report_id: 1, time_slot: "8:30", theater_number: 2)
 puts "planting"
-Sale.create(timeslot_id: 1, report_id: 2, tickets_sold: 3)
-Sale.create(timeslot_id: 1, report_id: 1, tickets_sold: 2)
-Sale.create(timeslot_id: 1, report_id: 1, tickets_sold: 5)
+Sale.create(timeslot_id: 1, tickets_sold: 3)
+Sale.create(timeslot_id: 1, tickets_sold: 2)
+Sale.create(timeslot_id: 1, tickets_sold: 5)
 
-Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 4)
-Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 1)
-Sale.create(timeslot_id: 2, report_id: 1, tickets_sold: 2)
+Sale.create(timeslot_id: 2, tickets_sold: 4)
+Sale.create(timeslot_id: 2, tickets_sold: 1)
+Sale.create(timeslot_id: 2, tickets_sold: 2)
 
-Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 4)
-Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 6)
-Sale.create(timeslot_id: 3, report_id: 2, tickets_sold: 3)
+Sale.create(timeslot_id: 3, tickets_sold: 4)
+Sale.create(timeslot_id: 3, tickets_sold: 6)
+Sale.create(timeslot_id: 3, tickets_sold: 3)
 
 puts "Seeds planted"

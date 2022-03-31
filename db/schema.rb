@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_30_175753) do
 
   create_table "sales", force: :cascade do |t|
     t.integer "timeslot_id"
-    t.integer "report_id"
     t.integer "tickets_sold"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_30_175753) do
 
   create_table "timeslots", force: :cascade do |t|
     t.integer "movie_id"
+    t.integer "report_id"
     t.string "time_slot"
     t.integer "theater_number"
     t.datetime "created_at", null: false

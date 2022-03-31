@@ -8,12 +8,12 @@ class ReportsController < ApplicationController
     report = Report.new()
     date = DateTime.now.to_s.split(%r{T\s*})
     today = Date.parse(date[0])
-    total_sales = Sale.where(created_at: today.midnight..today.end_of_day)
+    total_sales = Timeslot.where(created_at: today.midnight..today.end_of_day)
     report.name = "Report for #{today}"
     if report.save
-      total_sales.each do |sale|
-        sale.report_id = report.id
-        sale.save
+      total_sales.each do |slot|
+        slot.report_id = report.id
+        slot.save
       end
       render json: report
     else

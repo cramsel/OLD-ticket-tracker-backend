@@ -38,3 +38,16 @@ Content-Type: application/json
   "summary": "test summary",
   "poster_url": "https://www.google.com/search?q=thumbs+up&sxsrf=APq-WBsw_QWVy8gXoDzgU6hM0BBcfB15aQ:1648653472493&tbm=isch&source=iu&ictx=1&vet=1&fir=PDUw8wxPqcKoSM%252Cy4YCq8UQWuRX2M%252C%252Fm%252F0bss51%253BASK4BBtQ1Pl3jM%252CH9K69H4dbsS0_M%252C_%253B_g8R8LHi2IeHmM%252CSoy5Kr11n7DQYM%252C_%253BUXdJFKAs9KxN4M%252C-EzYRuUIT26LbM%252C_%253BDXeFkMZ_4_msYM%252CGQbWQJvO9jOjuM%252C_%253B2ci8I3KASO9ehM%252C8PwW6L8EDM1U3M%252C_%253BjN1JM17RYLP6jM%252C-CIIABzViapkXM%252C_&usg=AI4_-kQyI4p1HRbeyD4hnPLGnLoDDtWZ0A&sa=X&ved=2ahUKEwiorNfkkO72AhWmHzQIHWzKB3gQ_B16BAgtEAE#imgrc=PDUw8wxPqcKoSM"
 }
+
+###show timeslots
+GET http://localhost:3000/timeslots
+
+###post timeslots
+POST http://localhost:3000/timeslots
+Content-Type: application/json
+
+{
+  "movie_id": 1, 
+  "time_slot": "11:00",
+  "theater_number": 1
+}
