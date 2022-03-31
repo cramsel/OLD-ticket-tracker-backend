@@ -7,7 +7,6 @@ class SalesController < ApplicationController
   def create
     sale = Sale.new(
       timeslot_id: params[:timeslot_id],
-      report_id: nil,
       tickets_sold: params[:tickets_sold],
     )
 

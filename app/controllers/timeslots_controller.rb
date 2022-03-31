@@ -1,6 +1,6 @@
 class TimeslotsController < ApplicationController
   def index
-    timeslots = Timeslot.all
+    timeslots = Timeslot.all.includes(:sales)
     render json: timeslots
   end
 

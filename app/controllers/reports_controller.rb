@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   def index
-    reports = Report.all.sales
+    reports = Report.all.includes(:timeslots, :sales)
     render json: reports
   end
 
